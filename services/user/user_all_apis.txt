@@ -1,0 +1,60 @@
+Users:
+
+all these apis will be 
+localhost/users/{}
+
+1.    /register
+        "for registering user while creation"
+            cin << user_name: str
+                    email: str
+                    password: str = None
+                    google_id: str = None
+                    phone_number: str = None
+            cout >> 
+                access_token
+                token_type
+    
+2.      /login
+        "for loging in user and creating session"
+            cin << 
+                    user_name: str,
+                    password: str,
+            cout >> 
+                access_token
+                token_type
+
+3.       /check_user_name
+        "check if user name is already there in database with similar name"
+            cin<<
+            user_name: str,
+            cout>>
+            user_present : true/false
+
+
+4.        /protected
+        "send token of user session and we'll check if its our user or not"
+            cin<<
+            tokern : str
+            cout>>
+            error or {"message": "This is a protected route", "current_user": current_user}
+
+
+
+5.        /send_otp
+        "send otp to a partcular user "
+            cin<<
+            to_phone_number: str
+            cout>>
+            true or some error
+            sending otp
+
+6.        /verify_otp
+        "verify otp to a partcular user "
+            cin<<
+            to_phone_number: str
+            otp: str
+            cout>>
+            true or some error
+            sending otp
+
+

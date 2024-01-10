@@ -24,9 +24,6 @@ ecom provides with a CLI, providing server,shell and more to come commands
 
 Run these commands before we start
 ```
-cd src
-```
-```
 pip install --editable .
 ```
 
