@@ -18,3 +18,12 @@ ipython==8.11.0
 passlib==1.7.4
 bcrypt==3.2.0
 twilio==8.11.0
+# Pyrebase==3.0.27
+# yfinance
+# pip install yfinance --upgrade --no-cache-dir
+matplotlib==3.8.2
+seaborn==0.13.1
+# will have ti see
+tensorflow==2.15.0
+# scikit-learn
+scikit-learn

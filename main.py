@@ -7,13 +7,14 @@ from configs.env import APP_ENV
 from fastapi import HTTPException
 from fastapi.responses import JSONResponse
 from services.user.user_router import user_router
+from services.strategy.strategy_router import strategy_router
 from time import time
 import os
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from typing import Annotated
 from services.user.user_params import Token
 from services.user.interactions.authenticate_user import authenticate_user
-
+# from services.user.firebase_code_logic import firebaseAdminAuth
 
 
 docs = {
@@ -28,6 +29,7 @@ docs = {
 app = FastAPI(**docs)
 
 app.include_router(prefix = "/user", router=user_router, tags=['User Apis'])
+app.include_router(prefix = "/strategy", router=strategy_router, tags=['Strategy Apis'])
 
 
 app.add_middleware(
@@ -36,6 +38,19 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@app.get("/docs", include_in_schema=False)
+# async def get_swagger_documentation(response: str = Depends(firebaseAdminAuth)):
+#     return 
+
+
+# @app.get("/redoc", include_in_schema=False)
+# async def get_redoc_documentation(response: str = Depends(firebaseAdminAuth)):
+#     return 
+
+# @app.get("/openapi.json", include_in_schema=False)
+# async def openapi(response: str = Depends(firebaseAdminAuth)):
+#     return 
 
 
 
