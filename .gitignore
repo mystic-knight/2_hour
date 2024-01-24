@@ -167,3 +167,4 @@ test_peewee.py
 src/celerybeat-schedule.db
 dump.rdb
 celerybeat-schedule.db
+test.json

@@ -58,3 +58,6 @@ localhost/users/{}
             sending otp
 
 
+
+7.        /login/google
+        "self explanatory"

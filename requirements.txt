@@ -26,4 +26,6 @@ seaborn==0.13.1
 # will have ti see
 tensorflow==2.15.0
 # scikit-learn
-scikit-learn
+# scikit-learn
+oauthlib ==3.2.2
+Authlib==1.3.0
