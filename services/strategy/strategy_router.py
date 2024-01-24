@@ -9,7 +9,7 @@ strategy_router = APIRouter()
 def get_stock_predictions_api(stoke_name):
     try:
         return stock_prediction_deep_learning(stoke_name)
-    except HTTPException as e:
+    except HTTPException:
         raise
     except Exception as e:
         # raise in sentry as well

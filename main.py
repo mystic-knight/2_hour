@@ -9,7 +9,6 @@ from fastapi.responses import JSONResponse
 from services.user.user_router import user_router
 from services.strategy.strategy_router import strategy_router
 from time import time
-import os
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from typing import Annotated
 from services.user.user_params import Token

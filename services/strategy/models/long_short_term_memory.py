@@ -1,5 +1,4 @@
 
-import os
 import tensorflow as tf
 from tensorflow.python.keras import Sequential
 from tensorflow.python.keras.layers import Dropout

@@ -3,7 +3,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import math
 from datetime import datetime, timedelta
 from dateutil import relativedelta
 
@@ -27,7 +26,7 @@ def core_satellite(invested_amount = 100000, months = 4):
     delta = relativedelta.relativedelta(d2,d1)
     print('How many years of investing?')
     print('%s years' % delta.years)
-    number_of_years = delta.years
+    delta.years
     print('Percentage of invest:')
     percent_invest = [0.25, 0.25, 0.25, 0.25]
     for i, x in zip(df.columns, percent_invest):

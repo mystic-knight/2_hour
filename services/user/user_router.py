@@ -2,7 +2,6 @@
 from fastapi import Depends, APIRouter, HTTPException
 from fastapi.responses import JSONResponse
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
-from typing import Annotated
 from services.user.user_params import *
 from services.user.interactions.register import register
 from services.user.interactions.authenticate_user import authenticate_user
@@ -35,7 +34,7 @@ user_router = APIRouter()
 def register_api(request: RegisterUser):
     try:
         return register(request)
-    except HTTPException as e:
+    except HTTPException:
         raise
     except Exception as e:
         # raise in sentry as well
@@ -50,7 +49,7 @@ def login_api(
 ):
     try:
         return authenticate_user(user_name, password)
-    except HTTPException as e:
+    except HTTPException:
         raise
     except Exception as e:
         # raise in sentry as well
@@ -64,7 +63,7 @@ def login_api(
 ):
     try:
         return check_user_name(user_name)
-    except HTTPException as e:
+    except HTTPException:
         raise
     except Exception as e:
         # raise in sentry as well
@@ -80,7 +79,7 @@ async def get_current_active_user_api(
 ):
     try:
         return {"message": "This is a protected route", "current_user": current_user}
-    except HTTPException as e:
+    except HTTPException:
         raise
     except Exception as e:
         # raise in sentry as well

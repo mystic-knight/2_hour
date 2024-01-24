@@ -69,4 +69,3 @@ $ python3 -m pip install --upgrade -r requirements.txt
 pip3 freeze > requirements.txt
 
 python3 -m uvicorn app:app --reload
-# 2_hour
